@@ -1,9 +1,38 @@
-PLog = Object.create(Log);
+PLog = _.clone(Log);
 
 /// FOR TESTING
 var intercept = 0;
 var interceptedLines = [];
 var suppress = 0;
+
+// Intercept the next 'count' calls to a Log function. The actual
+// lines printed to the console can be cleared and read by calling
+// Log._intercepted().
+PLog._intercept = function (count) {
+  intercept += count;
+};
+
+// Suppress the next 'count' calls to a Log function. Use this to stop
+// tests from spamming the console, especially with red errors that
+// might look like a failing test.
+PLog._suppress = function (count) {
+  suppress += count;
+};
+
+// Rewind the interception.
+PLog._rewind = function () {
+  intercept = 0;
+  interceptedLines = [];
+  suppress = 0;
+};
+
+// Returns intercepted lines and resets the intercept counter.
+PLog._intercepted = function () {
+  var lines = interceptedLines;
+  interceptedLines = [];
+  intercept = 0;
+  return lines;
+};
 
 // XXX package
 var RESTRICTED_KEYS = ['time', 'timeInexact', 'level', 'file', 'line',
