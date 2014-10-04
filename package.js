@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Logging for packages, shows where in the application code something caused your logging.",
   version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  git: "https://github.com/timbrandin/meteor-package-logging"
 });
 
 Package.onUse(function(api) {
