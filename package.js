@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Logging for packages, show where in the application code something caused the logging.",
-  version: "1.0.1",
+  version: "1.0.2",
   git: "https://github.com/timbrandin/meteor-package-logging"
 });
 
