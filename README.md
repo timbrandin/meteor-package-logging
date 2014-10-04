@@ -1,4 +1,4 @@
-# Package Logging
+# Package Logging [![Build Status](https://travis-ci.org/timbrandin/meteor-package-logging.svg?branch=master)](https://travis-ci.org/timbrandin/meteor-package-logging)
 
 Logging for packages, show where in the application code something caused the logging.
 
