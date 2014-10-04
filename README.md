@@ -17,7 +17,7 @@ EpicAPI = {
   }
 };
 
-// Lets say we use this EpicAPI in our application in the file tests.js at line 9.
+// Lets say we use this EpicAPI in our application in the file tests.js at line 2.
 EpicAPI.call();
 
 // This will produce logging to the console
